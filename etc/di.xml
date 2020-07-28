@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="ProductFlowbv\Magento2\Api\ProductFlowApiInterface"
+                type="ProductFlowbv\Magento2\Model\ProductFlowApi"/>
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+        <arguments>
+            <argument name="columns">
+                <item name="productflow_marketplace_name" xsi:type="string">sales_order.productflow_marketplace_name
+                </item>
+                <item name="productflow_external_identifier" xsi:type="string">
+                    sales_order.productflow_external_identifier
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

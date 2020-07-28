@@ -1,0 +1,24 @@
+{
+  "name": "productflowbv/magento2",
+  "description": "ProductFlow Magento2",
+  "type": "magento2-module",
+  "authors": [
+    {
+      "name": "Remco van Essen",
+      "email": "remco@productflow.com"
+    }
+  ],
+  "version": "1.0.0",
+  "minimum-stability": "stable",
+  "require": {
+    "magento/framework": ">=101.0.0"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "ProductFlowbv\\Magento2\\": ""
+    }
+  }
+}

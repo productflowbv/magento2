@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <productflow>
+                <active>1</active>
+                <model>ProductFlowbv\Magento2\Model\Payment\ProductFlow</model>
+                <group>offline</group>
+                <title>ProductFlow</title>
+            </productflow>
+        </payment>
+        <carriers>
+            <productflow>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>ProductFlowbv\Magento2\Model\Carrier\ProductFlow</model>
+                <method_title>ProductFlow</method_title>
+                <carrier_title>ProductFlow</carrier_title>
+            </productflow>
+        </carriers>
+    </default>
+</config>
