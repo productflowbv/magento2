@@ -11,10 +11,7 @@ use Magento\Sales\Model\Order;
 class OrderObserver implements ObserverInterface
 {
 
-    /**
-     * @var Order
-     */
-    private $orderFactory;
+
 
     /**
      * @var OrderRepositoryInterface
@@ -26,11 +23,10 @@ class OrderObserver implements ObserverInterface
      */
     private $productRepository;
 
-    public function __construct(Order $orderFactory,
-                                OrderRepositoryInterface $orderRepository,
+    public function __construct(OrderRepositoryInterface $orderRepository,
                                 ProductRepository $productRepository)
     {
-        $this->orderFactory = $orderFactory;
+
         $this->orderRepository = $orderRepository;
         $this->productRepository = $productRepository;
     }
