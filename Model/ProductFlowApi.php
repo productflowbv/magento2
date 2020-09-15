@@ -60,8 +60,13 @@ class ProductFlowApi implements ProductFlowApiInterface
         $quoteIdMask = $this->quoteIdMaskFactory->create()->load($cartId, 'masked_id');
         $quote = $this->quoteRepo->get($quoteIdMask->getQuoteId());
 
-        $cartItems = $quote->getAllItems();
+        if(isset($prices['productflow_external_identifier']))
+        {
+            $quote->setData('productflow_external_identifier', $prices['productflow_external_identifier']);
+            $quote->setData('productflow_marketplace_name', $prices['productflow_marketplace_name']);
+        }
 
+        $cartItems = $quote->getAllItems();
         foreach ($cartItems as $item) {
 
             if (isset($prices['items'][$item->getId()])) {
