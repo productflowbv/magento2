@@ -39,6 +39,16 @@ class UpgradeData implements UpgradeDataInterface
     private $quoteSetupFactory;
 
     /**
+     * @var array
+     */
+    private $orderAttributes;
+
+    /**
+     * @var array
+     */
+    private $productAttributes;
+
+    /**
      * @param ConfigBasedIntegrationManager $integrationManager
      * @param SalesSetupFactory $salesSetupFactory
      * @param QuoteSetupFactory $quoteSetupFactory
